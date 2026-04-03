@@ -183,32 +183,32 @@
 │                    Next.js 14 (Port 3000)                   │
 │    App Router · SSR/CSR · Tailwind CSS · Zustand · Axios    │
 └──────────────────────┬──────────────────┬───────────────────┘
-                       │ HTTP REST         │ Socket.IO
-                       │ Bearer JWT        │ (ws upgrade over HTTP)
+                       │ HTTP REST        │ Socket.IO
+                       │ Bearer JWT       │ (ws upgrade over HTTP)
 ┌──────────────────────▼──────────────────▼───────────────────┐
 │                         BACKEND                             │
 │                   NestJS 10 (Port 3001)                     │
 │      TypeScript strict · RBAC Guards · Swagger UI           │
 │                                                             │
-│  ┌──────────┐ ┌──────────┐ ┌───────────┐ ┌─────────────┐   │
-│  │   Auth   │ │ Projects │ │   Chat    │ │ Notification│   │
-│  │  Module  │ │  Module  │ │  Gateway  │ │  Gateway    │   │
-│  └──────────┘ └──────────┘ └───────────┘ └─────────────┘   │
-│  ┌──────────┐ ┌──────────┐ ┌───────────┐ ┌─────────────┐   │
-│  │  Users   │ │  Docs    │ │Maintenance│ │  Monitoring │   │
-│  │  Module  │ │  + S3    │ │  Module   │ │  Module     │   │
-│  └──────────┘ └──────────┘ └───────────┘ └─────────────┘   │
+│  ┌──────────┐ ┌──────────┐ ┌───────────┐ ┌─────────────┐    │
+│  │   Auth   │ │ Projects │ │   Chat    │ │ Notification│    │
+│  │  Module  │ │  Module  │ │  Gateway  │ │  Gateway    │    │
+│  └──────────┘ └──────────┘ └───────────┘ └─────────────┘    │
+│  ┌──────────┐ ┌──────────┐ ┌───────────┐ ┌─────────────┐    │
+│  │  Users   │ │  Docs    │ │Maintenance│ │  Monitoring │    │
+│  │  Module  │ │  + S3    │ │  Module   │ │  Module     │    │
+│  └──────────┘ └──────────┘ └───────────┘ └─────────────┘    │
 └──────────┬─────────────────────────┬────────────────────────┘
-           │ TypeORM                  │ ioredis
+           │ TypeORM                 │ ioredis
 ┌──────────▼──────────┐   ┌──────────▼──────────┐
-│    PostgreSQL 16     │   │       Redis 7        │
-│   (все сущности)     │   │   (сессии, кэш)     │
+│    PostgreSQL 16    │   │       Redis 7      │
+│   (все сущности)    │   │   (сессии, кэш)    │
 └─────────────────────┘   └─────────────────────┘
                                       │
-                           ┌──────────▼──────────┐
+                           ┌──────────▼─────── ───┐
                            │  Yandex Cloud S3     │
                            │  (документы, аватары)│
-                           └─────────────────────┘
+                           └──────────────────── ─┘
 ```
 
 ---
@@ -412,7 +412,7 @@ project/
 #### Шаг 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/your-org/lk-project.git
+git clone https://github.com/Giocatory/lk-project.git
 cd lk-project
 ```
 
@@ -482,7 +482,7 @@ chmod +x setup-local.sh dev.sh
 ### Вариант 2 — Docker Compose
 
 ```bash
-git clone https://github.com/your-org/lk-project.git
+git clone https://github.com/Giocatory/lk-project.git
 cd lk-project
 
 # Скопировать и при необходимости отредактировать .env
